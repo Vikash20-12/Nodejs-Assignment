@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const employeesRoute = require('./employee.js');
+const employeesRoute = require('./routes/employee');
 
 
 
@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // calling the route
-app.use('/employees', employeesRoute);
+app.use('/', employeesRoute);
 
 
 // homepage route
