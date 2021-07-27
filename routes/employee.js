@@ -1,5 +1,4 @@
 const express = require('express');
-
 // route variable
 const router = express.Router();
 
@@ -17,7 +16,7 @@ router.get('/employees',(req, res)=>{
 //send user data to /employees
 router.post('/employees',(req, res)=>{
     const employee = req.body;
-    emp.push({...employee});
+    emp.push(employee);
     res.send(`${employee.username} added to the database`);
 });
 
